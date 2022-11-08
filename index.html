@@ -9,66 +9,125 @@
     <link rel="stylesheet" href="./style.css" />
 
     <title>Webbooster Shop</title>
+
+    <!-- Yandex.Metrika counter -->
+    <script type="text/javascript">
+      (function (m, e, t, r, i, k, a) {
+        m[i] =
+          m[i] ||
+          function () {
+            (m[i].a = m[i].a || []).push(arguments);
+          };
+        m[i].l = 1 * new Date();
+        for (var j = 0; j < document.scripts.length; j++) {
+          if (document.scripts[j].src === r) {
+            return;
+          }
+        }
+        (k = e.createElement(t)),
+          (a = e.getElementsByTagName(t)[0]),
+          (k.async = 1),
+          (k.src = r),
+          a.parentNode.insertBefore(k, a);
+      })(
+        window,
+        document,
+        'script',
+        'https://mc.yandex.ru/metrika/tag.js',
+        'ym'
+      );
+
+      ym(91099844, 'init', {
+        clickmap: true,
+        trackLinks: true,
+        accurateTrackBounce: true,
+      });
+    </script>
+    <noscript
+      ><div>
+        <img
+          src="https://mc.yandex.ru/watch/91099844"
+          style="position: absolute; left: -9999px"
+          alt=""
+        /></div
+    ></noscript>
+    <!-- /Yandex.Metrika counter -->
   </head>
   <body>
     <div class="container">
-      <button class="popup-btn">Купить</button>
-      <div class="popup" style="display: none">
-        <div class="popup__content">
-          <section>
-            <form class="form">
-              <input
-                class="form__input form__name"
-                type="text"
-                placeholder="Имя"
-              />
-              <input
-                class="form__input form__phone"
-                type="tel"
-                placeholder="Телефон"
-              />
-              <select name="" id="" class="form__select">
-                <option value="" disabled>Выберите из списка:</option>
-              </select>
-              <button class="form__button">Купить</button>
-            </form>
-          </section>
-        </div>
-      </div>
+      <header class="header">
+        <button class="button popup-btn">Купить</button>
+      </header>
 
-      <section class="cards-wrapper">
-        <h2>Товары в наличии</h2>
-        <div class="cards">
-          <div class="cards__item">
-            <div class="cards__img"><img src="img/1.png" alt="1" /></div>
-            <div class="cards__info">
-              <h3>Ботинки Thomas Munz</h3>
-              <p>11 999 руб</p>
-            </div>
-          </div>
-          <div class="cards__item">
-            <div class="cards__img"><img src="img/2.png" alt="1" /></div>
-            <div class="cards__info">
-              <h3>Дутики O2</h3>
-              <p>7 999 руб</p>
-            </div>
-          </div>
-          <div class="cards__item">
-            <div class="cards__img"><img src="img/3.png" alt="1" /></div>
-            <div class="cards__info">
-              <h3>Кроссовки PUMA 1</h3>
-              <p>12 990 руб</p>
-            </div>
-          </div>
-          <div class="cards__item">
-            <div class="cards__img"><img src="img/4.png" alt="1" /></div>
-            <div class="cards__info">
-              <h3>Кроссовки PUMA 2</h3>
-              <p>8 990 руб</p>
-            </div>
+      <main class="main">
+        <div class="popup" style="display: none">
+          <div class="popup__content">
+            <section>
+              <form method="GET" class="form">
+                <input
+                  name="name"
+                  class="input form__input form__name"
+                  type="text"
+                  placeholder="Имя"
+                />
+
+                <input
+                  name="phone"
+                  class="input form__input form__phone"
+                  type="tel"
+                  placeholder="Телефон"
+                />
+
+                <select name="product" id="" class="form__select">
+                  <option value="" disabled>Выберите из списка:</option>
+                </select>
+
+                <input class="input email__input" type="email" name="email"
+                placeholder="Получать письма по email о новых товарах "" />
+
+                <button class="button form__button">Купить</button>
+              </form>
+            </section>
           </div>
         </div>
-      </section>
+
+        <section class="cards-wrapper">
+          <h2>Товары в наличии</h2>
+          <div class="cards">
+            <div class="cards__item">
+              <div class="cards__img"><img src="img/1.png" alt="1" /></div>
+              <div class="cards__info">
+                <h3>Ботинки Thomas Munz</h3>
+                <p>11 999 руб</p>
+              </div>
+            </div>
+
+            <div class="cards__item">
+              <div class="cards__img"><img src="img/2.png" alt="1" /></div>
+              <div class="cards__info">
+                <h3>Дутики O2</h3>
+                <p>7 999 руб</p>
+              </div>
+            </div>
+
+            <div class="cards__item">
+              <div class="cards__img"><img src="img/3.png" alt="1" /></div>
+              <div class="cards__info">
+                <h3>Кроссовки PUMA 1</h3>
+                <p>12 990 руб</p>
+              </div>
+            </div>
+
+            <div class="cards__item">
+              <div class="cards__img"><img src="img/4.png" alt="1" /></div>
+              <div class="cards__info">
+                <h3>Кроссовки PUMA 2</h3>
+                <p>8 990 руб</p>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
     </div>
     <script src="script.js"></script>
   </body>
