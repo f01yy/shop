@@ -28,7 +28,7 @@ body {
   outline: none;
   border: 1px solid #777;
 }
-.email__input {
+.form__email {
   min-width: 315px;
 }
 /* .email__button {

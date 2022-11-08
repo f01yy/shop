@@ -17,6 +17,7 @@ const formBtn = document.querySelector('.form__button');
 const formSelect = document.querySelector('.form__select');
 const formNameInput = document.querySelector('.form__name');
 const formPhoneInput = document.querySelector('.form__phone');
+const formEmail = document.querySelector('.form__email');
 
 popupBtn.addEventListener('click', () => {
   popup.style.display = '';
@@ -36,6 +37,10 @@ formBtn.addEventListener('click', () => {
     formNameInput.value.length > 0
   ) {
     popup.style.display = 'none';
+    formNameInput.value = '';
+    formPhoneInput.value = '';
+    formSelect.value = '';
+    formEmail.value = '';
   } else if (formNameInput.value.length === 0) {
     formNameInput.classList.add('wrong-input');
 
