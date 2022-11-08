@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="./normalize.css" />
+    <link rel="stylesheet" href="./style.css" />
+
+    <title>Webbooster Shop</title>
+  </head>
+  <body>
+    <div class="container">
+      <button class="popup-btn">Купить</button>
+      <div class="popup" style="display: none">
+        <div class="popup__content">
+          <section>
+            <form class="form">
+              <input
+                class="form__input form__name"
+                type="text"
+                placeholder="Имя"
+              />
+              <input
+                class="form__input form__phone"
+                type="tel"
+                placeholder="Телефон"
+              />
+              <select name="" id="" class="form__select">
+                <option value="" disabled>Выберите из списка:</option>
+              </select>
+              <button class="form__button">Купить</button>
+            </form>
+          </section>
+        </div>
+      </div>
+
+      <section class="cards-wrapper">
+        <h2>Товары в наличии</h2>
+        <div class="cards">
+          <div class="cards__item">
+            <div class="cards__img"><img src="img/1.png" alt="1" /></div>
+            <div class="cards__info">
+              <h3>Ботинки Thomas Munz</h3>
+              <p>11 999 руб</p>
+            </div>
+          </div>
+          <div class="cards__item">
+            <div class="cards__img"><img src="img/2.png" alt="1" /></div>
+            <div class="cards__info">
+              <h3>Дутики O2</h3>
+              <p>7 999 руб</p>
+            </div>
+          </div>
+          <div class="cards__item">
+            <div class="cards__img"><img src="img/3.png" alt="1" /></div>
+            <div class="cards__info">
+              <h3>Кроссовки PUMA 1</h3>
+              <p>12 990 руб</p>
+            </div>
+          </div>
+          <div class="cards__item">
+            <div class="cards__img"><img src="img/4.png" alt="1" /></div>
+            <div class="cards__info">
+              <h3>Кроссовки PUMA 2</h3>
+              <p>8 990 руб</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
