@@ -44,6 +44,10 @@ formBtn.addEventListener('click', () => {
   } else if (formNameInput.value.length === 0) {
     formNameInput.classList.add('wrong-input');
 
+    if (formNameInput.nextElementSibling.className === 'warning') {
+      formNameInput.nextElementSibling.remove();
+    }
+
     const nameWarning = document.createElement('div');
     nameWarning.className = 'warning';
     nameWarning.innerHTML = 'Неверный формат имени';
@@ -60,6 +64,9 @@ formBtn.addEventListener('click', () => {
   } else if (!phoneNumberRegExp.test(formPhoneInput.value)) {
     formPhoneInput.classList.add('wrong-input');
 
+    if (formPhoneInput.nextElementSibling.className === 'warning') {
+      formPhoneInput.nextElementSibling.remove();
+    }
     const phoneWarning = document.createElement('div');
     phoneWarning.className = 'warning';
     phoneWarning.innerHTML = 'Неверный формат номера телефона';
